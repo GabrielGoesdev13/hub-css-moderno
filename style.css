@@ -1,6 +1,4 @@
-/* =================================
-   ESTILOS GLOBAIS (Reset e Body)
-   ================================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,11 +12,9 @@ body {
     color: #333;
 }
 
-/* =================================
-   ESTRUTURA (Header, Nav, Main, Footer)
-   ================================= */
+
 header {
-    background-color: #004a99; /* Azul escuro */
+    background-color: #004a99; 
     color: white;
     padding: 2rem 1.5rem;
     text-align: center;
@@ -34,7 +30,7 @@ nav {
 
 nav ul {
     list-style: none;
-    display: flex; /* Usando flexbox para a própria navegação! */
+    display: flex; 
     justify-content: center;
 }
 
@@ -49,12 +45,12 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
-    background-color: #007bff; /* Azul mais claro no hover */
+    background-color: #007bff; 
 }
 
 main {
     max-width: 960px;
-    margin: 2rem auto; /* Centraliza o conteúdo principal */
+    margin: 2rem auto; 
     padding: 1.5rem;
     background-color: #ffffff;
     border-radius: 8px;
@@ -96,14 +92,10 @@ footer {
     font-size: 0.9em;
 }
 
-/* =================================
-   ESTILOS DA PÁGINA FLEXBOX
-   ================================= */
 
-/* Base para todos os exemplos flex */
 .flex-container {
     display: flex;
-    background: #d3eafc; /* Fundo azul claro */
+    background: #d3eafc; 
     border: 2px solid #007bff;
     padding: 10px;
     margin-top: 15px;
@@ -112,7 +104,7 @@ footer {
 }
 
 .flex-item {
-    background-color: #007bff; /* Azul */
+    background-color: #007bff; 
     color: white;
     padding: 20px;
     margin: 5px;
@@ -121,15 +113,15 @@ footer {
     font-weight: bold;
 }
 
-/* Exemplo 1: Básicos */
+
 .example-1 {
     justify-content: space-around;
     align-items: center;
 }
 
-/* Exemplo 2: Intermediários */
+
 .example-2 {
-    align-items: flex-start; /* Alinha no topo para vermos o align-self funcionar */
+    align-items: flex-start; 
 }
 
 .item-grow-1 {
@@ -138,23 +130,19 @@ footer {
 
 .item-grow-2 {
     flex-grow: 2;
-    background-color: #0056b3; /* Azul mais escuro */
+    background-color: #0056b3; 
 }
 
 .item-self-end {
     align-self: flex-end;
-    background-color: #e6005c; /* Destaque rosa */
+    background-color: #e6005c; 
 }
 
 
-/* =================================
-   ESTILOS DA PÁGINA GRID
-   ================================= */
 
-/* Base para todos os exemplos grid */
 .grid-container {
     display: grid;
-    background: #d4f0db; /* Fundo verde claro */
+    background: #d4f0db;
     border: 2px solid #00a04a;
     padding: 10px;
     margin-top: 15px;
@@ -162,7 +150,7 @@ footer {
 }
 
 .grid-item {
-    background-color: #00a04a; /* Verde */
+    background-color: #00a04a; 
     color: white;
     padding: 20px;
     border-radius: 5px;
@@ -171,26 +159,27 @@ footer {
     min-height: 60px;
 }
 
-/* Exemplo 1: Grade simples */
+
 .example-grid-1 {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
-/* Exemplo 2: Spanning (Ocupação) */
+
 .example-grid-2 {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto; /* Definindo linhas automáticas */
+    grid-template-rows: auto auto auto; 
     gap: 10px;
 }
 
 .item-header {
-    grid-column: 1 / 4; /* Começa na linha 1, termina ANTES da 4 (ocupa 3 colunas) */
-    background-color: #00642e; /* Verde escuro */
+    grid-column: 1 / 4; 
+    background-color: #00642e; 
 }
 
 .item-sidebar {
-    grid-row: 2 / 4; /* Começa na linha 2, termina ANTES da 4 (ocupa 2 linhas) */
-    grid-column: 1 / 2; /* Ocupa só a primeira coluna */
-    background-color: #007a3a; /* Verde médio */
+    grid-row: 2 / 4; 
+    grid-column: 1 / 2; 
+    background-color: #007a3a; 
+
 }
