@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos de Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Hub de CSS Moderno</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="flexbox.html">Flexbox</a></li>
+            <li><a href="grid.html">Grid</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="content-section">
+            <h1>Desvendando o Flexbox</h1>
+            <p>O Flexbox (Flexible Box Layout Module) é um modelo de layout unidimensional projetado para distribuir espaço e alinhar itens dentro de um contêiner, mesmo quando o tamanho desses itens é desconhecido ou dinâmico.</p>
+
+            <h2>Conceitos Básicos (O Contêiner "Pai")</h2>
+            <p>Tudo começa aplicando <code>display: flex;</code> ao elemento "pai" (o contêiner).</p>
+            
+            <ul>
+                <li><code>flex-direction</code>: Define o eixo principal. <code>row</code> (horizontal, padrão) ou <code>column</code> (vertical).</li>
+                <li><code>justify-content</code>: Alinha os itens ao longo do eixo principal (ex: <code>center</code>, <code>space-between</code>, <code>flex-start</code>).</li>
+                <li><code>align-items</code>: Alinha os itens ao longo do eixo transversal (o eixo oposto, ex: <code>center</code>, <code>stretch</code>).</li>
+                <li><code>flex-wrap</code>: Permite que os itens "quebrem" para a próxima linha se não couberem. Padrão é <code>nowrap</code>.</li>
+            </ul>
+
+            <h3>Exemplo Básico (<code>justify-content: space-around;</code> e <code>align-items: center;</code>)</h3>
+            <div class="flex-container example-1">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </div>
+
+            <hr>
+
+            <h2>Conceitos Intermediários (Os Itens "Filhos")</h2>
+            <p>Podemos controlar o comportamento individual de cada item "filho" dentro do contêiner flex.</p>
+
+            <ul>
+                <li><code>flex-grow</code>: Define a capacidade de um item "crescer" para ocupar o espaço livre. (Ex: <code>flex-grow: 1;</code>)</li>
+                <li><code>flex-shrink</code>: Define a capacidade de um item "encolher" se não houver espaço suficiente.</li>
+                <li><code>flex-basis</code>: Define o tamanho inicial de um item antes que o espaço livre seja distribuído.</li>
+                <li><code>flex</code>: A propriedade "shorthand" (atalho) para <code>flex-grow</code>, <code>flex-shrink</code> e <code>flex-basis</code>. (Ex: <code>flex: 1;</code>)</li>
+                <li><code>align-self</code>: Permite que um item individual sobrescreva o <code>align-items</code> definido no "pai".</li>
+            </ul>
+
+            <h3>Exemplo Intermediário (<code>flex-grow</code> e <code>align-self</code>)</h3>
+            <p>Note como o "Item 2" ocupa mais espaço (<code>flex-grow: 2</code>) e o "Item 3" se alinha ao final (<code>align-self: flex-end</code>).</p>
+            
+            <div class="flex-container example-2">
+                <div class="flex-item item-grow-1">Item 1 (flex: 1)</div>
+                <div class="flex-item item-grow-2">Item 2 (flex: 2)</div>
+                <div class="flex-item item-self-end">Item 3 (align-self: flex-end)</div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Criado para fins educacionais</p>
+    </footer>
+
+</body>
+</html>

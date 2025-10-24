@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos de Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Hub de CSS Moderno</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="flexbox.html">Flexbox</a></li>
+            <li><a href="grid.html">Grid</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="content-section">
+            <h1>Desvendando o CSS Grid</h1>
+            <p>O CSS Grid Layout é um sistema de layout bidimensional (2D). Ele permite dividir a página em regiões principais ou definir a relação (em tamanho, posição e camada) entre partes de um controle HTML.</p>
+
+            <h2>Definindo a Grade (O Contêiner "Pai")</h2>
+            <p>Para começar, aplicamos <code>display: grid;</code> ao contêiner "pai".</o>
+
+            <ul>
+                <li><code>grid-template-columns</code>: Define o número e o tamanho das colunas. (Ex: <code>repeat(3, 1fr)</code> cria 3 colunas de tamanho igual). A unidade <code>fr</code> (fração) distribui o espaço disponível.</li>
+                <li><code>grid-template-rows</code>: Define o tamanho (altura) das linhas. (Ex: <code>auto</code> ou <code>100px</code>).</li>
+                <li><code>gap</code> (ou <code>grid-gap</code>): Define o espaçamento (canaleta) entre as células do grid. (Ex: <code>15px</code>).</li>
+            </ul>
+
+            <h3>Exemplo de Grade 3x2 (<code>repeat(3, 1fr)</code> e <code>gap: 10px</code>)</h3>
+            <div class="grid-container example-grid-1">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+                <div class="grid-item">Item 6</div>
+            </div>
+
+            <hr>
+
+            <h2>Posicionando Itens na Grade (Os "Filhos")</h2>
+            <p>O poder do Grid está em posicionar os "filhos" exatamente onde queremos, fazendo-os ocupar uma ou mais células.</p>
+
+            <ul>
+                <li><code>grid-column-start</code> / <code>grid-column-end</code>: Define em qual linha de coluna o item começa e termina.</li>
+                <li><code>grid-row-start</code> / <code>grid-row-end</code>: Define em qual linha de linha o item começa e termina.</li>
+                <li><strong>Shorthand (Atalho):</strong>
+                    <ul>
+                        <li><code>grid-column: 1 / 3;</code> (Ocupa da linha 1 até a 3)</li>
+                        <li><code>grid-column: 1 / span 2;</code> (Começa na linha 1 e ocupa 2 colunas)</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Exemplo de Itens Ocupando Espaços (Spanning)</h3>
+            <p>Aqui, o "Header" ocupa 3 colunas e o "Sidebar" ocupa 2 linhas.</p>
+            
+            <div class="grid-container example-grid-2">
+                <div class="grid-item item-header">Header (span 3 col)</div>
+                <div class="grid-item item-sidebar">Sidebar (span 2 row)</div>
+                <div class="grid-item">Conteúdo 1</div>
+                <div class="grid-item">Conteúdo 2</div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Criado para fins educacionais</p>
+    </footer>
+
+</body>
+</html>
